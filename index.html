@@ -33,10 +33,11 @@
             display: block;
             width: 90vw;
             }
+            
         }
 
         .lessons{
-            width: 100%; 
+            width: 100vw; 
             background-image: url("./images/bg.jpg");
             padding-left: 10px; 
             padding-bottom: 10px;
@@ -116,7 +117,88 @@
           #contactRight, #contactLeft {
             flex: 100%;
           }
+
+            
+            .lessons{
+            width: 100vw; 
+            background-image: url("./images/bg.jpg");
+            padding-left: 10px; 
+            padding-bottom: 10px;
+            }
         }
+
+        /* Live Editor */
+        #mainContainer {
+            self-align: center;
+            display: flex;
+            flex-direction: row;
+            }
+
+        #editor {
+            height: 100vh; 
+            width: 100vw; 
+            background-image: url('./images/bgCode.jpg');
+            }
+        
+        .head {
+            padding: 20px;
+            }
+        
+        .head > h1{
+            color: white;
+            }
+
+        .boxes{
+            padding: 10px;
+            margin: 1vw;
+            width: 49vw;
+            height: 80vh;
+            border-radius: 5px;
+            background-color: #246114;
+            opacity: 80%;
+            }
+
+        .innerBoxes{
+            width: 99%; 
+            height: 93%;
+            border: 1px solid black;
+            border-radius: 5px;
+            }
+        h3{
+            margin: 0;
+            margin-bottom: 7px;
+            padding-left: 7px;
+            color: #94f57a;
+            }
+
+        @media (max-width: 1000px) {
+            .head{
+                display: none;
+                }
+              #mainContainer {
+                flex-direction: column;
+              }
+
+              .boxes{
+                width: 90%;
+                height: 95vh;
+                margin: 5%;
+                padding: 0;
+               }
+
+            .innerBoxes{
+                height: 94%;
+                }
+
+            #editor {
+                height: 200vh; 
+                width: 100vw; 
+                background-image: url('./images/bgCode.jpg');
+                }
+            h3{
+            margin-top: 5px;
+                }
+            }
     </style>
 
     <!--Script for Loader -->
@@ -154,6 +236,7 @@
 <div id="menu">
     <a href="#" onClick="toggleMenu()">Home</a>
     <a href="#lessons" onMouseOver="openLesson()" onMouseOut="closeLesson()" onClick="toggleMenu()">Lessons&emsp;></a>
+    <a href="#editor" onClick="toggleMenu()">Live Editor</a>
     <a href="#contact" onClick="toggleMenu()">Contact Us</a>
 </div>
 
@@ -405,6 +488,43 @@
 </div>
 <!-- Lessons page ends here -->
 
+    <!-- Editor -->
+<div style="" id="editor">
+    <div class="head">
+        <h1 style="text-align: center;">Live Editor</h1>
+    </div>
+    <div id="mainContainer">    
+        <div id="code" class="boxes">
+            <h3>CODE</h3>
+            <textarea id="inputCode" class="innerBoxes" onkeyup="execute()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>
+<html>
+<head></head>       
+<body>
+<p>Write code to see effects!</p>
+</body>
+</html>   
+            </textarea>
+        </div>
+        
+        <div id="output" class="boxes">
+            <h3>OUTPUT</h3>
+        <div id="outputCode" class="innerBoxes" style="background-color: white;"></div>
+        </div>
+    </div>
+</div>
+
+    <script>
+    execute();
+    
+    function execute()
+        {
+        var data = document.getElementById("inputCode").value;
+        document.getElementById("outputCode").innerHTML = data;
+        }
+    </script>
+
+    
     <!-- Index / Head -->
 <div style="width: 100vw; height: 100vh; display: flex; flex-wrap: wrap;" id="contact">
     <div id="contactLeft">
