@@ -59,54 +59,24 @@
     <a href="#day7" onMouseOver="openLesson()" onClick="toggleMenu()">Day 7</a>
     <a href="#day8" onMouseOver="openLesson()" onClick="toggleMenu()">Day 8</a>
 </div>
-    
-<script>        
-    //Script for Navbar / Menu
-    var menu = true;
-    function toggleMenu()
-        {
-        if(menu)
-            {
-            menu = false;
-            menuLesson = true;
-            document.querySelector("#menu").style.visibility = "visible";
-            }
-        else
-            {
-            menu = true;
-            menuLesson = true;
-            document.querySelector("#menu").style.visibility = "hidden";
-            document.querySelector("#menuLesson").style.visibility = "hidden";
-            }
-        }
-
-         
-    //Script for Menu > Lessons
-    function openLesson()
-        {
-        document.querySelector("#menuLesson").style.visibility = "visible";
-        }
-    
-    function closeLesson()
-        {
-        document.querySelector("#menuLesson").style.visibility = "hidden";
-        }
-</script>
 
     
 <!-- Index / Home -->
-<div id="home" class="home row row-cols-1 row-cols-md-2">
-    <div align="center" class="col">
-        <img src="./images/html.png" class="headimage">
-    </div>
-
-        <div class="col">
-            <h1 style="padding: 20px;">Learn HTML in 7 days!</h1>
+<div id="home" class="home">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    
+        <div align="center" class="col homeCard">
+            <img src="./images/html.png" class="headimage">
+        </div>
+    
+        <div class="col homeCard homeCardR">
+            <h1>Learn HTML in 7 days!</h1>
             <p>Being the first building block, HTML is very easy to learn. <br>
                 everyone can do it in a week.<br><br><br>
             </p>
             <a href="#lessons" class="btn btn-primary">Get Started</a>
         </div>
+</div>
 </div>
 
 <!-- Lessons -->
@@ -342,6 +312,7 @@
     <b>Code with Aun &emsp; | &emsp; <a href="mailto:try_aun@hotmail.com">try_aun@hotmail.com</a></b>
 </div>
 
+    <script src="./nav.js"></script>
 
 <!-- CDN for Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
