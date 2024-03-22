@@ -5,9 +5,15 @@
 /*Loader */
 #loader {
     height: 100vh; 
-    background-color: #2e2d63; 
-    color: white;
+    background: url("./images/header.jpg");
+    padding-top: 20vh;
     }
+
+@media screen and (max-width: 768px) {   
+    #loader {
+        padding-top: 35vh; 
+        }
+}
 
 
 /* Navbar */
@@ -71,6 +77,45 @@
     color: white;
 }
 
+/* Home Icon */
+#homeIcon{
+    position: fixed; 
+    z-index: 99; 
+    top: 0;
+    width: 60px; 
+    margin: 10px;
+}
+
+#homeIcon:hover{
+    transform: scale(1.05);
+}
+
+#homeIcon > a > img {
+    border-radius: 50%;
+    }
+
+/* Top Icon */
+#topIcon{
+    position: fixed; 
+    z-index: 99; 
+    margin-top: 90vh;
+    width: 50px; 
+    margin-left: 94vw;
+}
+
+#topIcon:hover{
+    transform: scale(1.05);
+}
+
+#topIcon > a > img {
+    border-radius: 50%;
+    }
+
+@media screen and (max-width: 768px) { 
+    #topIcon{
+        margin-left: 85vw;
+        }
+}
 
 /* Head / home */
 .home {
@@ -158,6 +203,14 @@
     opacity: 80%;
 }
 
+.boxessimple{
+    padding: 10px;
+    margin: 1vw;
+    width: 49vw;
+    height: 80vh;
+    border-radius: 5px;
+}
+
 .innerBoxes{
     width: 99%; 
     height: 93%;
@@ -186,6 +239,13 @@ h3{
         padding: 0;
     }
 
+    .boxessimple{
+        width: 90%;
+        height: 95vh;
+        margin: 5%;
+        padding: 0;
+    }
+
     .innerBoxes{
         height: 94%;
     }
@@ -208,4 +268,25 @@ h3{
     position: relative;
     bottom: 0;
     }
-        
+
+.lessonPage {
+    width: 100vw;  
+    text-align: center;
+    background: url("./images/header.jpg");
+    overflow-x: hidden;
+    padding-top: 10px;
+    z-index: 98;
+    }
+
+#index > a {
+    text-decoration: none;
+    color: inherit;
+    }
+
+#index > a:hover {
+    color: #2e2d63;
+    }
+
+.maintext {
+    margin: 25px;
+    }
