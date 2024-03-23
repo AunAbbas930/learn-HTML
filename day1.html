@@ -61,15 +61,9 @@
             <div class="col" style="text-align: left;" id="index">
                 <a href="#h1">HTML and its role in web development</a>
             <br><a href="#h2">Basic structure of an HTML document</a>
-            <br><a href="#">Headings, paragraphs, and line breaks</a>
-            <br><a href="#">Assignment</a>
-                
-               <!--<h6>Task:</h6>
-                Create an "About Me" web page: 
-                <ul>
-                    <li>Build a simple webpage introducing yourself.</li>
-                    <li>Include your name, a brief bio, and your interests.</li>
-                </ul>-->
+            <br><a href="#h3">Headings, paragraphs, and line breaks</a>
+            <br><a href="#h4">Assignment</a>
+
             </div>
         </div>
     </div>
@@ -81,6 +75,8 @@
     <h3 id="h1">1. HTML and its role in web development</h3>
     <p>Since 1993, Hyper Text Markup Language (HTML) is a markup language used to create and structure web pages on the internet. It is a set of instructions to all web browsers, to display text, images, audio, and video on a web. As every beautiful building is designed on a basic reinforced concrete structure similarly, HTML is the basic building block for all website that we see on the internet. The latest version of HTML is HTML5.</p>
     <p>Web development refers to the building and creating of websites and the foundation is laid through HTML. Therefore we cannot skip HTML while learning web development. It is the skeleton or structure of a webpage.</p>
+
+
 
     
     <h3 id="h2">2. Basic structure of an HTML document</h3>
@@ -116,7 +112,7 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
                 </div>
             
                 <script>
-                execute();
+                execute1();
                 
                 function execute1()
                     {
@@ -130,7 +126,7 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
         
         <li>
             <h5>&ltHTML&gt</h5>
-            <p>All the HTML document lies between &lthtml&gt and &lt/html&gt, and is coded so. In HTML, the thing between less-than sign (<) and the greater-than sign (>) is called a TAG.  a tag without "/" is called opening tag and the one with "/" is called closing tag. <b>html tag</b> defines that everything between html tags is the html document. (see the code and output below)</p>
+            <p>All the HTML document lies between &lthtml&gt and &lt/html&gt, and is coded so. In HTML, the thing with less-than sign (<) at start and the greater-than sign (>) at end is called a TAG.  A tag without "/" is called opening tag and the one with "/" is called closing tag. &lthtml&gt tag defines that everything between this tag is the html document. (see the code and output below)</p>
             
             <!-- Editor -->
             
@@ -151,7 +147,7 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
                 </div>
             
                 <script>
-                execute();
+                execute2();
                 
                 function execute2()
                     {
@@ -190,7 +186,7 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
                 </div>
             
                 <script>
-                execute();
+                execute3();
                 
                 function execute3()
                     {
@@ -204,11 +200,261 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
             <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
         </li>
     </ol>
-    
 
+
+
+
+    
+<h3 id="h3">3. Headings, paragraphs, and line breaks</h3>
+     <p>After basic structure, lets discuss what to add in body section so that some output may appear? Lets start with some most important elements:</p>
+    <ol>
+        <li>
+            <h5>Headings</h5>
+            <p>&lt!DOCTYPE&gt tells the browser that the page is designed on HTML. And so, all the design is displayed perfectly.</p>
+            <p>We just add &lt!DOCTYPE html&gt on the top of the document. (see the code and output below)</p>
+            
+            <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 420px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode4" class="innerBoxes" onkeyup="execute4()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+<head>
+</head>
+<body>
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+                            
+</body>
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 420px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode4" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute4();
+                
+                function execute4()
+                    {
+                    var data = document.getElementById("inputCode4").value;
+                    document.getElementById("outputCode4").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>It adds nothing to our output.</p>
+        </li>
+        
+        <li>
+            <h5>Paragraphs</h5>
+            <p>All the HTML document lies between &lthtml&gt and &lt/html&gt, and is coded so. In HTML, the thing with less-than sign (<) at start and the greater-than sign (>) at end is called a TAG.  A tag without "/" is called opening tag and the one with "/" is called closing tag. &lthtml&gt tag defines that everything between this tag is the html document. (see the code and output below)</p>
+            
+            <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 320px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode5" class="innerBoxes" onkeyup="execute5()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+<head>
+</head>
+<body>
+
+<h1>This is Heading</h1>
+<p>This is a paragraph</p>
+                            
+</body>
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 320px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode5" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute5();
+                
+                function execute5()
+                    {
+                    var data = document.getElementById("inputCode5").value;
+                    document.getElementById("outputCode5").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>It also doesn't add any thing to our output.</p>
+        </li>
+                <li>
+            <h5>Line Break</h5>
+            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
+            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
+            
+     <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 400px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode6" class="innerBoxes" onkeyup="execute6()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+<head>
+</head>
+<body>
+
+<h1>This is Heading</h1>
+<p>This is a paragraph</p>
+<p>This is second paragraph, line 1<br>
+This is second line</p>
+                            
+</body>
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 400px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode6" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute6();
+                
+                function execute6()
+                    {
+                    var data = document.getElementById("inputCode6").value;
+                    document.getElementById("outputCode6").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>This is the necessary part of an HTML file and doesn't add anything in output. This structure must be designed first in all. </p>
+                    <p><b>For those using "VS Code", simply write "!" in empty document and press enter. VS Code automatically creates this basic design (called boiler plate template).</b></p>
+            <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
+        </li>               
+        <li>
+            <h5>Horizontal Rule</h5>
+            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
+            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
+            
+     <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 400px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode7" class="innerBoxes" onkeyup="execute7()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+<head>
+</head>
+<body>
+
+<h1>This is Heading</h1>
+<p>This is a paragraph</p>
+<hr>
+<p>This is second paragraph, after horizontal rule</p>
+                            
+</body>
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 400px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode7" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute7();
+                
+                function execute7()
+                    {
+                    var data = document.getElementById("inputCode7").value;
+                    document.getElementById("outputCode7").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>This is the necessary part of an HTML file and doesn't add anything in output. This structure must be designed first in all. </p>
+                    <p><b>For those using "VS Code", simply write "!" in empty document and press enter. VS Code automatically creates this basic design (called boiler plate template).</b></p>
+            <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
+        </li>
+
+        <li>
+            <h5>Preformatted Text (pre)</h5>
+            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
+            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
+            
+     <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 450px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode8" class="innerBoxes" onkeyup="execute8()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+<head>
+</head>
+<body>
+
+<p>This is a paragraph.
+This line Doen't go on second line.
+          These 10 spaces are also not applied</p>
+                            
+<pre>This is a preformatted paragraph.
+This line goes on second line.
+          These 10 spaces are also applied</pre>
+                            
+</body>
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 450px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode8" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute8();
+                
+                function execute8()
+                    {
+                    var data = document.getElementById("inputCode8").value;
+                    document.getElementById("outputCode8").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>This is the necessary part of an HTML file and doesn't add anything in output. This structure must be designed first in all. </p>
+                    <p><b>For those using "VS Code", simply write "!" in empty document and press enter. VS Code automatically creates this basic design (called boiler plate template).</b></p>
+            <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
+        </li>
+        
+    </ol>
+
+    
 </div>
 
 
+
+                    
+               <!--<h6>Task:</h6>
+                Create an "About Me" web page: 
+                <ul>
+                    <li>Build a simple webpage introducing yourself.</li>
+                    <li>Include your name, a brief bio, and your interests.</li>
+                </ul>-->
+
+    
 <!-- Footer -->
 <div class="footer">
     <b>Code with Aun &emsp; | &emsp; <a href="mailto:try_aun@hotmail.com">try_aun@hotmail.com</a></b>
