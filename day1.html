@@ -59,8 +59,8 @@
                 <h1>Day 1: Introduction</h1>
             </div>
             <div class="col" style="text-align: left;" id="index">
-                <a href="#">HTML and its role in web development</a>
-            <br><a href="#">Basic structure of an HTML document</a>
+                <a href="#h1">HTML and its role in web development</a>
+            <br><a href="#h2">Basic structure of an HTML document</a>
             <br><a href="#">Headings, paragraphs, and line breaks</a>
             <br><a href="#">Assignment</a>
                 
@@ -78,43 +78,136 @@
 
 <!-- Text -->
 <div class="maintext">
-    asd
+    <h3 id="h1">1. HTML and its role in web development</h3>
+    <p>Since 1993, Hyper Text Markup Language (HTML) is a markup language used to create and structure web pages on the internet. It is a set of instructions to all web browsers, to display text, images, audio, and video on a web. As every beautiful building is designed on a basic reinforced concrete structure similarly, HTML is the basic building block for all website that we see on the internet. The latest version of HTML is HTML5.</p>
+    <p>Web development refers to the building and creating of websites and the foundation is laid through HTML. Therefore we cannot skip HTML while learning web development. It is the skeleton or structure of a webpage.</p>
+
+    
+    <h3 id="h2">2. Basic structure of an HTML document</h3>
+    <p>For structuring a HTML document, we firstly need a text editor. There are several editors available, here we have three options amoung them: 
+    <ol>
+        <li>Notepad, it is available on all windows based computers.</li>
+        <li>Text, is a default application in most of Android systems.</li>
+        <li>VS Code is the most famous nowadays, as it provide development environment. It can be downloaded free of cost 
+            (<a href="https://code.visualstudio.com/download" target="blank">Download now!</a>)</li>
+    </ol>
+For your ease, you can find <b>live editor</b> on this website (<a href="./index.html#editor" target="blank">also placed at home page</a>)</p>
+    <p>A HTML document is structured on three parts:</p>
+    <ol>
+        <li>
+            <h5>&lt!DOCTYPE&gt declaration</h5>
+            <p>&lt!DOCTYPE&gt tells the browser that the page is designed on HTML. And so, all the design is displayed perfectly.</p>
+            <p>We just add &lt!DOCTYPE html&gt on the top of the document. (see the code and output below)</p>
+            
+            <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 100px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode1" class="innerBoxes" onkeyup="execute1()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+                        </textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 100px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode1" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute();
+                
+                function execute1()
+                    {
+                    var data = document.getElementById("inputCode1").value;
+                    document.getElementById("outputCode1").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>It adds nothing to our output.</p>
+        </li>
+        
+        <li>
+            <h5>&ltHTML&gt</h5>
+            <p>All the HTML document lies between &lthtml&gt and &lt/html&gt, and is coded so. In HTML, the thing between less-than sign (<) and the greater-than sign (>) is called a TAG.  a tag without "/" is called opening tag and the one with "/" is called closing tag. <b>html tag</b> defines that everything between html tags is the html document. (see the code and output below)</p>
+            
+            <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 150px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode2" class="innerBoxes" onkeyup="execute2()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 150px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode2" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute();
+                
+                function execute2()
+                    {
+                    var data = document.getElementById("inputCode2").value;
+                    document.getElementById("outputCode2").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>It also doesn't add any thing to our output.</p>
+        </li>
+                <li>
+            <h5>Head and Body</h5>
+            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
+            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
+            
+            <!-- Editor -->
+            
+                <div id="mainContainer">    
+                    <div id="code" class="boxessimple" style="height: 250px;">
+                        <h4>CODE</h4>
+                        <textarea id="inputCode3" class="innerBoxes" onkeyup="execute3()" cols="70" rows="50" style="resize: none;">
+<!DOCTYPE html>  
+<html>
+<head>
+</head>
+<body>
+                            
+</body>
+</html></textarea>
+                    </div>
+                    
+                    <div id="output" class="boxessimple" style="height: 250px;">
+                        <h4>OUTPUT</h4>
+                    <div id="outputCode3" class="innerBoxes" style="background-color: white;"></div>
+                    </div>
+                </div>
+            
+                <script>
+                execute();
+                
+                function execute3()
+                    {
+                    var data = document.getElementById("inputCode3").value;
+                    document.getElementById("outputCode3").innerHTML = data;
+                    }
+                </script>
+            <br>
+            <p>This is the necessary part of an HTML file and doesn't add anything in output. This structure must be designed first in all. </p>
+                    <p><b>For those using "VS Code", simply write "!" in empty document and press enter. VS Code automatically creates this basic design (called boiler plate template).</b></p>
+            <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
+        </li>
+    </ol>
+    
+
 </div>
 
-    
-<!-- Editor -->
-
-    <div id="mainContainer">    
-        <div id="code" class="boxessimple">
-            <h4>CODE</h4>
-            <textarea id="inputCode" class="innerBoxes" onkeyup="execute()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>
-<html>
-<head></head>       
-<body>
-<p>Write code to see effects!</p>
-</body>
-</html>   
-            </textarea>
-        </div>
-        
-        <div id="output" class="boxessimple">
-            <h4>OUTPUT</h4>
-        <div id="outputCode" class="innerBoxes" style="background-color: white;"></div>
-        </div>
-    </div>
-
-    <script>
-    execute();
-    
-    function execute()
-        {
-        var data = document.getElementById("inputCode").value;
-        document.getElementById("outputCode").innerHTML = data;
-        }
-    </script>
-
-    
 
 <!-- Footer -->
 <div class="footer">
