@@ -210,8 +210,8 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
     <ol>
         <li>
             <h5>Headings</h5>
-            <p>&lt!DOCTYPE&gt tells the browser that the page is designed on HTML. And so, all the design is displayed perfectly.</p>
-            <p>We just add &lt!DOCTYPE html&gt on the top of the document. (see the code and output below)</p>
+            <p>Heading always comes first. Mostly all documents have a big heading on the top. Some smaller sub-headings and some even more smaller headings are found in documents. In HTML, we have six (6) different sizes of Headings starting from the largest heading (h1) upto to the smallest (h6).</p>
+            <p>All six headings are placed between tags, as shown below: (see the code and its output)</p>
             
             <!-- Editor -->
             
@@ -257,7 +257,7 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
         
         <li>
             <h5>Paragraphs</h5>
-            <p>All the HTML document lies between &lthtml&gt and &lt/html&gt, and is coded so. In HTML, the thing with less-than sign (<) at start and the greater-than sign (>) at end is called a TAG.  A tag without "/" is called opening tag and the one with "/" is called closing tag. &lthtml&gt tag defines that everything between this tag is the html document. (see the code and output below)</p>
+            <p>After headings, some lines of text are seen. We all know, the thing is a Paragraph. HTML uses &ltp&gt tags for displaying a paragraph (code and output below)</p>
             
             <!-- Editor -->
             
@@ -298,8 +298,8 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
         </li>
                 <li>
             <h5>Line Break</h5>
-            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
-            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
+            <p>What if we want to start a new line, in or outside a paragraph? HTML doesn't display ENTER, if we place it in our code. So we use &ltbr&gt tags for starting a new line. It is a self closing tag and doesn't need to close with a &lt/br&gt.</p>
+            <p>Here we have a sample code, that uses &ltbr&gt tag for starting a new line:</p>
             
      <!-- Editor -->
             
@@ -337,15 +337,11 @@ This is second line</p>
                     document.getElementById("outputCode6").innerHTML = data;
                     }
                 </script>
-            <br>
-            <p>This is the necessary part of an HTML file and doesn't add anything in output. This structure must be designed first in all. </p>
-                    <p><b>For those using "VS Code", simply write "!" in empty document and press enter. VS Code automatically creates this basic design (called boiler plate template).</b></p>
-            <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
         </li>               
         <li>
             <h5>Horizontal Rule</h5>
-            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
-            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
+            <p>Sometimes, there is a requirement of a long horizontal line on our document. This line may have different purposes, either it be a page break or section separator or any other. a horizontal line or a rule is defined by &lthr&gt tag (it is again a self closing tag)</p>
+            <p>See below:</p>
             
      <!-- Editor -->
             
@@ -441,18 +437,16 @@ This line goes on second line.
         
     </ol>
 
+    <h3 id="h4">Assignment</h3>
+    <p>Create an "About Me" web page:</p>
+    <ul>
+        <li>Build a simple webpage introducing yourself.</li>
+        <li>Include your name, a brief bio, and your interests.</li>
+    </ul>
     
 </div>
 
-
-
-                    
-               <!--<h6>Task:</h6>
-                Create an "About Me" web page: 
-                <ul>
-                    <li>Build a simple webpage introducing yourself.</li>
-                    <li>Include your name, a brief bio, and your interests.</li>
-                </ul>-->
+    
 
     
 <!-- Footer -->
