@@ -56,11 +56,11 @@
     <div class="container">
         <div class="row row-cols-1 row-cols-md-2 p-1 g-4">
             <div class="col">
-                <h1>Day 2: Text Formatting and Links</h1>
+                <h2>Day 2: Text Formatting and Links</h2>
             </div>
             <div class="col" style="text-align: left;" id="index">
-                <a href="#h1">Explore text formatting tags like &ltstrong&gt, &ltem&gt,&ltu&gt, etc.</a>
-            <br><a href="#h2">Learn how to create hyperlinks using the '&lta&gt' tag.</a>
+                <a href="#h1">Text formatting using &ltstrong&gt, &ltem&gt,&ltu&gt, etc.</a>
+            <br><a href="#h2">Create hyperlinks using the '&lta&gt' tag.</a>
             <br><a href="#h3">Assignment</a>
                 
             </div>
@@ -71,40 +71,121 @@
 
 <!-- Text -->
 <div class="maintext">
-    <h3 id="h1">1. HTML and its role in web development</h3>
-    <p>Since 1993, Hyper Text Markup Language (HTML) is a markup language used to create and structure web pages on the internet. It is a set of instructions to all web browsers, to display text, images, audio, and video on a web. As every beautiful building is designed on a basic reinforced concrete structure similarly, HTML is the basic building block for all website that we see on the internet. The latest version of HTML is HTML5.</p>
-    <p>Web development refers to the building and creating of websites and the foundation is laid through HTML. Therefore we cannot skip HTML while learning web development. It is the skeleton or structure of a webpage.</p>
-
-
-
     
-    <h3 id="h2">2. Basic structure of an HTML document</h3>
-    <p>For structuring a HTML document, we firstly need a text editor. There are several editors available, here we have three options amoung them: 
-    <ol>
-        <li>Notepad, it is available on all windows based computers.</li>
-        <li>Text, is a default application in most of Android systems.</li>
-        <li>VS Code is the most famous nowadays, as it provide development environment. It can be downloaded free of cost 
-            (<a href="https://code.visualstudio.com/download" target="blank">Download now!</a>)</li>
-    </ol>
-For your ease, you can find <b>live editor</b> on this website (<a href="./index.html#editor" target="blank">also placed at home page</a>)</p>
-    <p>A HTML document is structured on three parts:</p>
-    <ol>
-        <li>
-            <h5>&lt!DOCTYPE&gt declaration</h5>
-            <p>&lt!DOCTYPE&gt tells the browser that the page is designed on HTML. And so, all the design is displayed perfectly.</p>
-            <p>We just add &lt!DOCTYPE html&gt on the top of the document. (see the code and output below)</p>
+    <h3 id="h1">1. Text formatting using &ltstrong&gt, &ltem&gt,&ltu&gt, etc.</h3>
+    <p>As we use Bold, Italic, Underline, Strikethrough etc. for formatting our text in a text editor, similarly we have following tags for formatting in an HTML document:</p>
+   
+    <style>
+        table, tr, td {
+            border: 1pt solid black; 
+            border-collapse: collapse;
+            padding: 2px;
+            }
+    </style>
+    
+    <table>
+        <tr align="center">
+            <td><b>Tag</b></td>
+            <td><b>Name</b></td>
+            <td><b>Purpose</b></td>
+        </tr>
+        <tr>
+            <td>&ltb&gt</td>
+            <td>Bold Text</td>
+            <td>Simply Bold</td>
+        </tr>
+        <tr>
+            <td>&ltstrong&gt</td>
+            <td>Important Text</td>
+            <td>Bold and important</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                &ltb&gt and &ltstrong&gt, both make text bold. But AI readers treat &ltstrong&gt as important text
+            </td>
+        </tr>
+        <tr>
+            <td>&lti&gt</td>
+            <td>Italic text</td>
+            <td>Simply Italic</td>
+        </tr>
+        <tr>
+            <td>&ltem&gt</td>
+            <td>Emphasized text</td>
+            <td>Italic and emphasis</td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                &lti&gt and &ltem&gt, both make text italic. But Screen readers pronounce &ltem&gt as emphasis, using verbal stress
+            </td>
+        </tr>
+        <tr>
+            <td>&ltmark&gt</td>
+            <td>Marked text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&ltsmall&gt</td>
+            <td>Smaller text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&ltdel&gt</td>
+            <td>Deleted text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&ltins&gt</td>
+            <td>Inserted text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&ltsub&gt</td>
+            <td>Subscript text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&ltsup&gt</td>
+            <td>Superscript text</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>&ltu&gt</td>
+            <td>Underline Text</td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    <p>See how it looks:</p>
             
             <!-- Editor -->
             
                 <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 100px;">
+                    <div id="code" class="boxessimple" style="height: 600px;">
                         <h4>CODE</h4>
                         <textarea id="inputCode1" class="innerBoxes" onkeyup="execute1()" cols="70" rows="50" style="resize: none;">
 <!DOCTYPE html>  
-                        </textarea>
+<html>
+<head>
+</head>
+<body>
+                            
+This is how <b>bold</b> works<br>
+And this is <strong>strong</strong><br>
+Here is simple <i>Italic</i><br>
+And an <em>Emphasis</em><br>
+If we want to <mark>highlight</mark> something, we use "mark"<br>
+This is a <small>small</small> text<br>
+In stores, we see: <del>Was $340</del> <ins>Now $250</ins><br>
+Chemistry uses subscript as: H<sub>2</sub>O<br>
+Mathematics needs superscript as: y = x<sup>2</sup><br>
+Simply, <u>underline</u> 
+                            
+</body>
+</html></textarea>
                     </div>
                     
-                    <div id="output" class="boxessimple" style="height: 100px;">
+                    <div id="output" class="boxessimple" style="height: 600px;">
                         <h4>OUTPUT</h4>
                     <div id="outputCode1" class="innerBoxes" style="background-color: white;"></div>
                     </div>
@@ -120,313 +201,9 @@ For your ease, you can find <b>live editor</b> on this website (<a href="./index
                     }
                 </script>
             <br>
-            <p>It adds nothing to our output.</p>
-        </li>
-        
-        <li>
-            <h5>&ltHTML&gt</h5>
-            <p>All the HTML document lies between &lthtml&gt and &lt/html&gt, and is coded so. In HTML, the thing with less-than sign (<) at start and the greater-than sign (>) at end is called a TAG.  A tag without "/" is called opening tag and the one with "/" is called closing tag. &lthtml&gt tag defines that everything between this tag is the html document. (see the code and output below)</p>
-            
-            <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 150px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode2" class="innerBoxes" onkeyup="execute2()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 150px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode2" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute2();
-                
-                function execute2()
-                    {
-                    var data = document.getElementById("inputCode2").value;
-                    document.getElementById("outputCode2").innerHTML = data;
-                    }
-                </script>
-            <br>
-            <p>It also doesn't add any thing to our output.</p>
-        </li>
-                <li>
-            <h5>Head and Body</h5>
-            <p>An HTML document has two parts, head and it's body. Head is coded between &lthead&gt and &lt/head&gt tags. Visibly, it adds nothing to documents. It may change icon of our page. Title of the page, that is displayed on title bar of browser, is also defined in head. All links are added here. Sometimes, styling is also done in head. If we are using any frame work (like bootstrap or tailwindcss, etc.) its CDN is also linked within head.</p>
-            <p>While all the code written within &ltbody&gt and &lt/body&gt tags is the body of our document. This is what we get in the window of our browser. Al text, videos, images etc are part of body. A basic empty html document appers as below:</p>
-            
-            <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 250px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode3" class="innerBoxes" onkeyup="execute3()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-<head>
-</head>
-<body>
-                            
-</body>
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 250px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode3" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute3();
-                
-                function execute3()
-                    {
-                    var data = document.getElementById("inputCode3").value;
-                    document.getElementById("outputCode3").innerHTML = data;
-                    }
-                </script>
-            <br>
-            <p>This is the necessary part of an HTML file and doesn't add anything in output. This structure must be designed first in all. </p>
-                    <p><b>For those using "VS Code", simply write "!" in empty document and press enter. VS Code automatically creates this basic design (called boiler plate template).</b></p>
-            <p>Save the file with extension <b>.html</b> (home.html / index.html or mypage.html etc.), and run the file in browser by simply opening it in a browser (chrome, opera, firefox etc).</p>
-        </li>
-    </ol>
-
-
-
-
     
-<h3 id="h3">3. Headings, paragraphs, and line breaks</h3>
-     <p>After basic structure, lets discuss what to add in body section so that some output may appear? Lets start with some most important elements:</p>
-    <ol>
-        <li>
-            <h5>Headings</h5>
-            <p>Heading always comes first. Mostly all documents have a big heading on the top. Some smaller sub-headings and some even more smaller headings are found in documents. In HTML, we have six (6) different sizes of Headings starting from the largest heading (h1) upto to the smallest (h6).</p>
-            <p>All six headings are placed between tags, as shown below: (see the code and its output)</p>
-            
-            <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 420px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode4" class="innerBoxes" onkeyup="execute4()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-<head>
-</head>
-<body>
 
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-                            
-</body>
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 420px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode4" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute4();
-                
-                function execute4()
-                    {
-                    var data = document.getElementById("inputCode4").value;
-                    document.getElementById("outputCode4").innerHTML = data;
-                    }
-                </script>
-            <br>
-            <p>It adds nothing to our output.</p>
-        </li>
-        
-        <li>
-            <h5>Paragraphs</h5>
-            <p>After headings, some lines of text are seen. We all know, the thing is a Paragraph. HTML uses &ltp&gt tags for displaying a paragraph (code and output below)</p>
-            
-            <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 320px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode5" class="innerBoxes" onkeyup="execute5()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-<head>
-</head>
-<body>
-
-<h1>This is Heading</h1>
-<p>This is a paragraph</p>
-                            
-</body>
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 320px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode5" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute5();
-                
-                function execute5()
-                    {
-                    var data = document.getElementById("inputCode5").value;
-                    document.getElementById("outputCode5").innerHTML = data;
-                    }
-                </script>
-            <br>
-            <p>It also doesn't add any thing to our output.</p>
-        </li>
-                <li>
-            <h5>Line Break</h5>
-            <p>What if we want to start a new line, in or outside a paragraph? HTML doesn't display ENTER, if we place it in our code. So we use &ltbr&gt tags for starting a new line. It is a self closing tag and doesn't need to close with a &lt/br&gt.</p>
-            <p>Here we have a sample code, that uses &ltbr&gt tag for starting a new line:</p>
-            
-     <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 400px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode6" class="innerBoxes" onkeyup="execute6()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-<head>
-</head>
-<body>
-
-<h1>This is Heading</h1>
-<p>This is a paragraph</p>
-<p>This is second paragraph, line 1<br>
-This is second line</p>
-                            
-</body>
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 400px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode6" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute6();
-                
-                function execute6()
-                    {
-                    var data = document.getElementById("inputCode6").value;
-                    document.getElementById("outputCode6").innerHTML = data;
-                    }
-                </script>
-        </li>               
-        <li>
-            <h5>Horizontal Rule</h5>
-            <p>Sometimes, there is a requirement of a long horizontal line on our document. This line may have different purposes, either it be a page break or section separator or any other. a horizontal line or a rule is defined by &lthr&gt tag (it is again a self closing tag)</p>
-            <p>See below:</p>
-            
-     <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 400px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode7" class="innerBoxes" onkeyup="execute7()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-<head>
-</head>
-<body>
-
-<h1>This is Heading</h1>
-<p>This is a paragraph</p>
-<hr>
-<p>This is second paragraph, after horizontal rule</p>
-                            
-</body>
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 400px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode7" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute7();
-                
-                function execute7()
-                    {
-                    var data = document.getElementById("inputCode7").value;
-                    document.getElementById("outputCode7").innerHTML = data;
-                    }
-                </script>
-        </li>
-
-        <li>
-            <h5>Preformatted Text (pre)</h5>
-            <p>Rarely used a &ltpre&gt tag is used to display a preformatted text. What ever we write in this tag, appears as it is. HTML preserves all the blank spaces and new lines and displays it on our document.</p>
-     <!-- Editor -->
-            
-                <div id="mainContainer">    
-                    <div id="code" class="boxessimple" style="height: 450px;">
-                        <h4>CODE</h4>
-                        <textarea id="inputCode8" class="innerBoxes" onkeyup="execute8()" cols="70" rows="50" style="resize: none;">
-<!DOCTYPE html>  
-<html>
-<head>
-</head>
-<body>
-
-<p>This is a paragraph.
-This line Doen't go on second line.
-          These 10 spaces are also not applied</p>
-                            
-<pre>This is a preformatted paragraph.
-This line goes on second line.
-          These 10 spaces are also applied</pre>
-                            
-</body>
-</html></textarea>
-                    </div>
-                    
-                    <div id="output" class="boxessimple" style="height: 450px;">
-                        <h4>OUTPUT</h4>
-                    <div id="outputCode8" class="innerBoxes" style="background-color: white;"></div>
-                    </div>
-                </div>
-            
-                <script>
-                execute8();
-                
-                function execute8()
-                    {
-                    var data = document.getElementById("inputCode8").value;
-                    document.getElementById("outputCode8").innerHTML = data;
-                    }
-                </script>
-        </li>
-        
-    </ol>
-
-    <h3 id="h4">Assignment</h3>
+    <h3 id="h3">Assignment</h3>
     <p>For practice, create an "About Me" web page with following details:</p>
     <ul>
         <li>Build a simple webpage introducing yourself.</li>
